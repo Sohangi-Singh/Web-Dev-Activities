@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    background-color: rgb(11, 11, 30);
+    display: flex;
+    justify-content: center;  
+    align-items: center;       
+    height: 100vh;             
+    margin: 0;                  
+}
+    .box{
+        height: 100px;
+        width: 100px;
+        background-color: aqua;  
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 10px rgb(46, 241, 244);
+        margin: auto;
+        
+        position: relative;
+    }
+    .box2{
+        height: 25px;
+        width: 25px;
+        background-color: aliceblue;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 10px rgb(232, 240, 240);
+        position: absolute;
+        top: 50%;                          
+        left: 50%;                          
+        transform: translate(-50%, -50%) rotate(0deg) translateX(122.5px);
+        animation: orbit 5s linear infinite;
+    }
+    @keyframes orbit {
+        from {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(122.5px) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(122.5px) rotate(-360deg);
+  }
+}
+ 
+
+</style>
+<body>
+    <div container="space">
+
+        <div class="box"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html> 
