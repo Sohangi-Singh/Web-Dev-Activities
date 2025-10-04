@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: whitesmoke;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px black;
+      transition: all 0.3s ease;
+    }
+
+    .gallery img:hover {
+      border: 2px solid black;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Dog Gallery</h1>
+
+  <div class="gallery">
+    <img src="https://imgs.search.brave.com/Zwcfv9Jyytw-j1jcW_6s8mW2Di3YeSHcCp5BcXYwiJ0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDkwMTU1/MzcuanBn" alt="Dog 1">
+    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=800&q=80" alt="Dog 2">
+    <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=800&q=80" alt="Dog 3">
+    <img src="https://imgs.search.brave.com/XfWrjbJaCp3ccLuLHza-iQsbOM092nB4xJFg143bo1s/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC9hL2Mv/MS8xOTc5MDYtMzg0/MHgyMTYwLWRlc2t0/b3AtNGstZG9nLWJh/Y2tncm91bmQtaW1h/Z2UuanBn" alt="Dog 4">
+    <img src="https://imgs.search.brave.com/Ny4u0lK1h5HFIJ3FGLVBF0x2m3VCkhLwhpOBreZnaE0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvNzY5/MTUyLnBuZw" alt="Dog 5">
+    <img src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?auto=format&fit=crop&w=800&q=80" alt="Dog 6">
+    <img src="https://imgs.search.brave.com/3JTFm3m-EqhlnVmDanCDlICbdY-_aondGTc_AcW4ZYI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC8wL2Qv/Yi8xOTc2ODQtMzg0/MHgyMTYwLWRlc2t0/b3AtNGstZG9nLWJh/Y2tncm91bmQtcGhv/dG8uanBn" alt="Dog 7">
+    <img src="https://imgs.search.brave.com/NS4_rfEPNBDQwXuGIkIK4F8VwYjALxhCGqwZ18nZfZE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvNzY5/MjAzLmpwZw" alt="Dog 8">
+    <img src="https://imgs.search.brave.com/4lwH1oqNCbhh8n2LVKw7O2c-MMaNuCXp5zAbzHoQOHc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDkwMTU4/NjIuanBn" alt="Dog 9">
+  </div>
+
+</body>
+</html>
