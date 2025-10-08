@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Wheel</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 50px;
+        background: white;
+      }
+
+      .ferris-container {
+        width: 300px;
+        height: 300px;
+        position: relative;
+        border: 2px solid black;
+        border-radius: 50%;
+        animation: turn 15s linear infinite;
+        margin: 100px auto;
+      }
+
+      .spoke {
+        position: absolute;
+        background: gray;
+        height: 1px;
+        width: 150px;
+        top: 50%;
+        left: 50%;
+        transform-origin: 0 0;
+      }
+
+      .spoke:nth-child(1) { transform: rotate(0deg); }
+      .spoke:nth-child(2) { transform: rotate(51.4deg); }
+      .spoke:nth-child(3) { transform: rotate(102.8deg); }
+      .spoke:nth-child(4) { transform: rotate(154.2deg); }
+      .spoke:nth-child(5) { transform: rotate(205.6deg); }
+      .spoke:nth-child(6) { transform: rotate(257deg); }
+      .spoke:nth-child(7) { transform: rotate(308.4deg); }
+
+      .passenger-car {
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        background: blue;
+        animation: keep-upright 15s linear infinite;
+        margin-left: -15px;
+        margin-top: -10px;
+      }
+
+      .car-1 { top: 50%; left: 100%; }  
+      .car-2 { top: 79%; left: 90%; }   
+      .car-3 { top: 100%; left: 50%; }  
+      .car-4 { top: 79%; left: 10%; }   
+      .car-5 { top: 50%; left: 0%; }    
+      .car-6 { top: 21%; left: 10%; }   
+      .car-7 { top: 0%; left: 50%; }    
+
+      @keyframes turn {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      @keyframes keep-upright {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(-360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ferris-container">
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+
+      <div class="passenger-car car-1"></div>
+      <div class="passenger-car car-2"></div>
+      <div class="passenger-car car-3"></div>
+      <div class="passenger-car car-4"></div>
+      <div class="passenger-car car-5"></div>
+      <div class="passenger-car car-6"></div>
+      <div class="passenger-car car-7"></div>
+    </div>
+  </body>
+</html>
